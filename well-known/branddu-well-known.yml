@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of https://branddu.com/.well-known/* (HTTP status recorded)
+note: >-
+  branddu.com is a Shopify-hosted storefront. The 200 well-known documents below are
+  served by Shopify's Customer Account authentication surface (issuer
+  https://shopify.com/authentication/24058560608), not a first-party Branddu developer
+  API. Captured verbatim as discovered. No security.txt, api-catalog, or ai-plugin.json
+  is published.
+endpoints:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: branddu-openid-configuration.json
+  provider: shopify-customer-account
+  issuer: https://shopify.com/authentication/24058560608
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: branddu-oauth-authorization-server.json
+  provider: shopify-customer-account
+  issuer: https://shopify.com/authentication/24058560608
+- path: /.well-known/security.txt
+  status: 404
+  file: null
+- path: /.well-known/api-catalog
+  status: 404
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 404
+  file: null
